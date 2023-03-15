@@ -11,7 +11,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -164,6 +164,6 @@ app.post("/login", function(req, res) {
 
 
 
-app.listen(process.env.PORT || port, function() {
+app.listen(port, function() {
     console.log("Server running on port 3000.");
 });
