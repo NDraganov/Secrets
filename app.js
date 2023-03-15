@@ -139,7 +139,6 @@ app.post("/register", function(req, res) {
       .catch(function (err) {
         console.log(err);
       })
-
 });
 
 app.post("/login", function(req, res) {
